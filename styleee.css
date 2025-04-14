@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  form {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  button:hover {
+    background: #45a049;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  .welcome{
+text-align: center;
+font-style: oblique;
+font-weight: 100;
+text-decoration-color: darkblue;
+align-items: center;
+
+  }
+  /* Navbar */
+.navbar {
+    background-color: #2a3d56;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #4CAF50;
+}
+
+
+/* ========== Responsive Media Queries ========== */
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .logo img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  .navbar .logo img {
+    width: 100px;
+  }
+
+  form {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+  }
+}
+

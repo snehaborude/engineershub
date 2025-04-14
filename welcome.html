@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="styleee.css" />
+</head>
+<body>
+    
+    <h1   class="welcome">Welcome to <span id="username"> Guys </span>, An Engineer's Hub!</h1>
+  <p> you to the homepage...</p>
+  <script>
+    // Check if user is logged in
+    const user = localStorage.getItem("loggedInUser");
+    if (!user) {
+      window.location.href = "login.html"; // Not logged in? Send back to login
+    } else {
+      // After 2 seconds, redirect to homepage
+      setTimeout(() => {
+        window.location.href = "home.html";  // 👈 Your homepage
+      }, 2000);
+    }
+      
+    // Get username from localStorage or fallback
+    const username = localStorage.getItem('username') || "Guys";
+    document.getElementById("username").textContent = username;
+
+    function speakWelcome() {
+      const message = `Welcome ${username}, to An Engineer's Hub!`;
+      const utterance = new SpeechSynthesisUtterance(message);
+      utterance.rate = 1;
+      utterance.pitch = 1;
+      utterance.volume = 1;
+      speechSynthesis.speak(utterance);
+    }
+
+    // Auto-speak on page load (optional)
+    window.onload = () => {
+      speakWelcome();
+    };
+ 
+    
+  </script>
+</body>
+</html>

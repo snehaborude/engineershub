@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - A Engineer's Hub</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Engineer’s Hub Logo">
+    </div>
+    <ul>
+        <p class="wname"><b>ENGINEERSHUB</b></p>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li> <a href="contactus.html">contactus</a></li>
+
+        <li><a href="#" onclick="logout()">Logout</a></li>
+        
+    </ul>
+    <!-- Toggle Theme Icon -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <img src="images/theme-icon.png" alt="Toggle Theme" id="theme-icon">
+    </div>
+</nav>
+
+<script>
+  const user = localStorage.getItem("loggedInUser");
+  if (!user) {
+    window.location.href = "login.html";
+  } else {
+    document.getElementById("user-name").textContent = user;
+  }
+
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html";
+  }
+</script>
+
+<nav class="top-nav">
+    <a href="https://courserecommendation2.onrender.com/">🚀 Go to Course Recommendation</a>
+  </nav>
+
+  <header>
+    <h1>Explore Engineering Courses</h1>
+    <p>Enhance your skills with the latest technical domains</p>
+  </header>
+
+  <section class="card-container">
+    <div class="info-card">
+      <h2>Machine Learning</h2>
+      <p>Master AI algorithms, neural networks, and data-driven decision making.</p>
+    </div>
+    <div class="info-card">
+      <h2>Robotics</h2>
+      <p>Build intelligent robots using sensors, actuators, and control systems.</p>
+    </div>
+    <div class="info-card">
+      <h2>Web Development</h2>
+      <p>Design responsive websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+    </div>
+    <div class="info-card">
+      <h2>Cloud Computing</h2>
+      <p>Work with AWS, Azure, and DevOps to build scalable cloud applications.</p>
+    </div>
+    <div class="info-card">
+      <h2>Cybersecurity</h2>
+      <p>Secure systems through ethical hacking, encryption, and threat analysis.</p>
+    </div>
+    <div class="info-card">
+      <h2>Data Structures & Algorithms</h2>
+      <p>Optimize logic and problem-solving with trees, graphs, and sorting techniques.</p>
+    </div>
+    <div class="info-card">
+      <h2>IoT</h2>
+      <p>Develop connected devices that communicate over the internet in real-time.</p>
+    </div>
+    <div class="info-card">
+      <h2>Blockchain</h2>
+      <p>Understand decentralization, smart contracts, and crypto-ledger tech.</p>
+    </div>
+  </section>
+
+     <!-- Footer -->
+     <footer>
+        <p>
+       
+            Our team make sure that every user who uses our website should  have a good user experience,
+            and should find a good projects and courses.
+        </p>
+        <p><b>2025-ENGINEERSHUB</b> "Empowering engineers to create, innovate, and lead the future"
+
+        </p>
+</footer>
+
+    <script src="course.js"></script>
+</body>
+</html>

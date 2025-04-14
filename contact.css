@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Navbar */
+.navbar {
+  background-color:#00246b ;
+
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 50px;
+  
+}
+.wname{
+  font-size: 30px;
+  color:white;
+  margin-left: 10px;
+ 
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar ul li {
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap:5px;
+  margin-left:auto;
+  padding: 0%;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color:#0036b1;
+}
+
+.navbar .theme-toggle {
+  background: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+/* Theme Toggle Icon Styling */
+.theme-toggle {
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.theme-toggle img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .feature-card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+.dark-mode a,
+.dark-mode .btn {
+  color: #ffd700;
+}
+.dark-mode .extracard{
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+/* Contact Us Page */
+.contact-form {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.contact-form h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #1b84ec;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #021d43;
+}
+/* Footer */
+footer {
+  background-color: #2a3d56;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .logo img {
+    width: 40px;
+  }
+
+  .wname {
+    font-size: 24px;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar ul li a {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .theme-toggle {
+    margin: 10px 0 0 auto;
+  }
+
+  .contact-form {
+    padding: 30px 10px;
+  }
+
+  .contact-form h2 {
+    font-size: 26px;
+  }
+
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 15px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .wname {
+    font-size: 20px;
+  }
+
+  .theme-toggle img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-form h2 {
+    font-size: 22px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}

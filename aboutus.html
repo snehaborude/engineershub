@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - A Engineer's Hub</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Engineer’s Hub Logo">
+        </div>
+        <ul>
+            <p class="wname"><b>ENGINEERSHUB</b></p>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li> <a href="contactus.html">contactus</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+            
+        </ul>
+        <!-- Toggle Theme Icon -->
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <img src="images/theme-icon.png" alt="Toggle Theme" id="theme-icon">
+        </div>
+    </nav>
+
+    <script>
+        const user = localStorage.getItem("loggedInUser");
+        if (!user) {
+          window.location.href = "login.html";
+        } else {
+          document.getElementById("user-name").textContent = user;
+        }
+    
+        function logout() {
+          localStorage.removeItem("loggedInUser");
+          window.location.href = "index.html";
+        }
+      </script>
+
+<section class="about-section">
+    <h1>About EngineersHub</h1>
+    <p>EngineersHub is a collaborative platform created by passionate engineering students to inspire innovation through hands-on projects, curated resources, and community support.</p>
+    <p>Meet the developers who brought it to life:</p>
+  </section>
+  <section class="mission-vision">
+    <h2>Our Vision</h2>
+    <p>To empower every engineer with knowledge, creativity, and confidence to innovate.</p>
+  
+    <h2>Our Mission</h2>
+    <p>To provide quality project ideas and course recommendation in one hub.</p>
+  </section>
+  
+
+  <section class="team-section">
+    <div class="team-container" id="team-container"></div>
+  </section>
+     <!-- Footer -->
+     <footer>
+        <p>
+       
+            Our team make sure that every user who uses our website should  have a good user experience,
+            and should find a good projects and courses.
+        </p>
+        <p><b>2025-ENGINEERSHUB</b> "Empowering engineers to create, innovate, and lead the future"
+
+        </p>
+</footer>
+
+    <script src="aboutus.js"></script>
+</body>
+</html>

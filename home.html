@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer’s Hub</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Engineer’s Hub Logo">
+        </div>
+        <ul>
+            <p class="wname"><b>ENGINEERSHUB</b></p>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li> <a href="contactus.html">contactus</a></li>
+
+            <li><a href="#" onclick="logout()">Logout</a></li>
+
+        </ul>
+        <!-- Toggle Theme Icon -->
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <img src="images/theme-icon.png" alt="Toggle Theme" id="theme-icon">
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1  class="Welcome">Welcome, <span id="user-name"></span>!</h1>
+        
+      </div>
+    
+      <script>
+        const user = localStorage.getItem("loggedInUser");
+        if (!user) {
+          window.location.href = "login.html";
+        } else {
+          document.getElementById("user-name").textContent = user;
+        }
+    
+        function logout() {
+          localStorage.removeItem("loggedInUser");
+          window.location.href = "index.html";
+        }
+      </script>
+
+  
+    
+  
+
+    <!-- Image Gallery Slider Section -->
+    <section class="gallery-slider">
+        <h2><b>ENCOURAGES CREATIVITY AND BUILDING</b></h2>
+        <h2>Projects platform for Engineers</h2>
+        <div class="slider-container">
+            <div class="slide">
+                <img src="./images/img1.avif" alt="Gallery Image 1">
+            </div>
+            <div class="slide">
+                <img src="./images/img2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="slide">
+                <img src="./images/img3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="slide">
+                <img src="./images/img4.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="slide">
+                <img src="./images/img5.jpg" alt="Gallery Image 5">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Feature Cards Section -->
+    <section class="features">
+        <div class="feature-card" onclick="location.href='project.html'">
+            <div class="card-icon">
+                <img src="./images/card1.jpg" alt="Projects Icon">
+            </div>
+            <h3>Innovative Projects</h3>
+            <p>Explore engineering projects to build your skills and creativity.</p>
+            <a href="project.html" class="btn">See Projects</a>
+        </div>
+
+        <div class="feature-card" onclick="location.href='course.html'">
+            <div class="card-icon">
+                <img src="./images/card2.jpg" alt="Courses Icon">
+            </div>
+            <h3>Educational Courses</h3>
+            <p>Take courses to advance your skills and knowledge in various engineering fields.</p>
+            <a href="course.html" class="btn">Browse Courses</a>
+        </div>
+
+        <div class="feature-card" onclick="location.href='contactus.html'">
+            <div class="card-icon">
+                <img src="./images/card3.jpg" alt="Contact Us Icon">
+            </div>
+            <h3>Get in Touch</h3>
+            <p>Contact us for any assistance, guidance, or to get your questions answered.</p>
+            <a href="contactus.html" class="btn">Contact Us</a>
+        </div>
+    
+    <div class="extracard">
+        <p class="extracardln"></p>
+        
+           <br><b><i>ALL SOFTWARE PROJECTS IDEAS</i></b><br>
+           <br>*AI Healthcare Bot System using Python
+           <br>*ShareBook App Android Book Sharing Application
+           <br>*Travel Together – A Travel Buddy Finder System
+           <br>*Travel and Tourism Website using Python
+           <br> *Android Grocery Management App
+           <br> *Android Local Geofence System
+           <br> *Digital Scrabble Word Dictionary Game Python
+           <br>*Automatic Pronunciation Mistake Detector
+           <br>*Chronic Obstructive Pulmonary Disease Prediction System
+           <br>*College Placement System Using Python 
+           <br>*Medical Report Management & Distribution System on Blockchain
+           <br>*Biometric Student Attendance System App
+           <br>*Music and Shows Finder Flutter App
+           <br>*Timer Based Phone Silencer App
+           <br>*Face Recognition Attendance System for Employees using Python 
+           <br>*Stroke Prediction System using Linear Regression
+           <br>*Toxic Comment Classification System using Deep Learning
+           <br>*Flutter Based Digital Classroom App for Android & iOS
+           <br>*Extracurricular Event Tracking System App
+           <br>*Flutter Based Blood Donation App
+           <br>*Organic Food Traceability System using Blockchain
+           <br>*Pharma Supply Chain System using Smart Contracts
+           <br>*School Security System using RFID
+           <br>*Shared Office Finder System Using Flutter
+           <br>*Memory Card Game Flutter App
+           <br>*Flutter Based Bill Reminder App
+        </p>
+        <img src="./images/img7.png" class="img">
+
+    </div>
+    <img src="./images/img9.jpg" class="imgg">
+ 
+    </section>
+        
+        
+       
+       
+
+    <!-- Footer -->
+    <footer>
+            <p>
+           
+                Our team make sure that every user who uses our website should  have a good user experience,
+                and should find a good projects and courses.
+            </p>
+            <p><b>2025-ENGINEERSHUB</b> "Empowering engineers to create, innovate, and lead the future"
+
+            </p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

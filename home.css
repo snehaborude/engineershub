@@ -1,0 +1,447 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#cadcfc;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    background-color:#00246b ;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.navbar .logo img {
+    width: 50px;
+    
+}
+.wname{
+    font-size: 30px;
+    color:white;
+    margin-left: 10px;
+   
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar ul li {
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:5px;
+    margin-left:auto;
+    padding: 0%;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 9px 5px 2px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+
+    margin-right: 10px;
+    margin-left: 70px;
+}
+
+.navbar ul li a:hover {
+    background-color:#0036b1;
+}
+
+.navbar .theme-toggle {
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+/* Theme Toggle Icon Styling */
+.theme-toggle {
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.theme-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .feature-card {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.dark-mode a,
+.dark-mode .btn {
+    color: #ffd700;
+}
+.dark-mode .extracard{
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+.welcome{
+  text-align: center;
+  
+  font-style: oblique;
+  color: #022742;
+}
+
+
+/* Image Gallery Slider Section */
+.gallery-slider {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.gallery-slider h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: transform 1s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    height: 400px;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Feature Cards Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 15px;
+    background-color: rgb(94, 127, 246);
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    margin: 10px 0;
+    transition: transform 0.3s;
+    border-color: #0d0b0b;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card .card-icon img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.feature-card .btn {
+    background-color: #022742;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.extracard{
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    flex-direction: wrap;
+    width: 100%;
+    margin: 20px;
+    transition: transform 0.3s;
+    border-color: #0d0b0b;
+
+}
+
+.extracardln{
+    
+    text-align: start;
+}
+.img{
+    height: 60%;
+    width: 50%;
+    margin-left: 150px;
+    margin-top:90px ;
+}
+.imgg{
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #2a3d56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+/* =================== Responsive Styles =================== */
+
+@media (max-width: 1024px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 30px;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 8px;
+    }
+  
+    .navbar ul li {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .navbar ul li a {
+      margin-left: 0;
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 90%;
+    }
+  
+    .extracard {
+      flex-direction: column;
+      width: 90%;
+      margin: 20px auto;
+    }
+  
+    .img {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  
+    .slider-container {
+      width: 95%;
+    }
+  
+    .slide img {
+      height: 250px;
+    }
+  
+    .theme-toggle {
+      margin-left: 0;
+      align-self: flex-end;
+      margin-top: 10px;
+    }
+    
+  }
+  
+  @media (max-width: 600px) {
+    .navbar {
+      padding: 10px 20px;
+    }
+  
+    .wname {
+      font-size: 24px;
+    }
+  
+    .navbar ul li a {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .theme-toggle img {
+      width: 26px;
+      height: 26px;
+    }
+  
+    .feature-card h3 {
+      font-size: 18px;
+    }
+  
+    .feature-card p {
+      font-size: 13px;
+    }
+  
+    .feature-card .btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .slider-container {
+      width: 100%;
+    }
+  
+    .slide img {
+      height: 200px;
+    }
+  
+    footer {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+  
+  /* Small devices (Mobile, less than 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .logo img {
+    width: 40px;
+  }
+
+  .wname {
+    font-size: 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .theme-toggle img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .about-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .mission-vision h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission-vision p {
+    font-size: 1rem;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member-card {
+    width: 90%;
+    padding: 20px;
+  }
+  .button.prev{
+    visibility: hidden;
+  }
+  .button.next{
+    visibility: hidden;
+  }
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
