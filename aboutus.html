@@ -3,12 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - A Engineer's Hub</title>
-    <link rel="stylesheet" href="aboutus.css">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Font and Base Setup */
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Navbar */
+.navbar {
+  background-color:#00246b ;
+
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 50px;
+  
+}
+.wname{
+  font-size: 30px;
+  color:white;
+  margin-left: 10px;
+ 
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar ul li {
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap:5px;
+  margin-left:auto;
+  padding: 0%;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color:#0036b1;
+}
+
+.navbar .theme-toggle {
+  background: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+/* Theme Toggle Icon Styling */
+.theme-toggle {
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.theme-toggle img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .feature-card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+.dark-mode.about-section{
+  color: #121212;
+}
+
+.dark-mode a,
+.dark-mode .btn {
+  color: #ffd700;
+}
+.dark-mode .extracard{
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+/* About Section */
+.about-section,
+.mission-vision {
+    max-width: 900px;
+    background-color: #b1a6a6;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+    color: #121212;
+}
+
+.mission-vision h2 {
+  color: #121212;
+    margin-top: 2rem;
+}
+
+/* Team Cards */
+header h1 {
+    font-size: 2.5rem;
+    color: #00246b;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #00246b;
+}
+
+.card p {
+    color: #555;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Footer */
+footer {
+    background-color: #00246b;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .theme-toggle {
+        margin: 10px 0 0;
+    }
+
+    .team-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .wname,
+.dark-mode .navbar a {
+    color: #f4ecec;
+}
+
+.dark-mode .navbar ul li a:hover {
+    background-color: #333;
+}
+
+.dark-mode .card {
+    background-color: #1f1f1f;
+    color: #bbb2b2;
+}
+
+.dark-mode .modal-content {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.about-section {
+    background-color: #dceeff; /* Soft blue */
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mission-vision-wrapper {
+    background-color: #ffffff; /* Single white box */
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mission-vision-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.vision, .mission {
+    flex: 1 1 400px;
+}
+
+.vision h2, .mission h2 {
+    margin-bottom: 0.5rem;
+    color: #003366;
+}
+
+
+    </style>
+    
 </head>
 <body>
-     <!-- Navbar -->
-     <nav class="navbar">
+
+      <!-- Navbar -->
+      <nav class="navbar">
         <div class="logo">
             <img src="images/logo.png" alt="Engineer’s Hub Logo">
         </div>
@@ -19,7 +349,7 @@
             <li><a href="course.html">Courses</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li> <a href="contactus.html">contactus</a></li>
-            <li><a href="#" onclick="logout()">Logout</a></li>
+            <li><a href="login.html" onclick="logout()">Logout</a></li>
             
         </ul>
         <!-- Toggle Theme Icon -->
@@ -28,49 +358,158 @@
         </div>
     </nav>
 
-    <script>
-        const user = localStorage.getItem("loggedInUser");
-        if (!user) {
-          window.location.href = "login.html";
-        } else {
-          document.getElementById("user-name").textContent = user;
-        }
+    <section class="about-section">
+        <h1>About EngineersHub</h1>
+        <p class="name">EngineersHub is a collaborative platform created by passionate engineering students to inspire innovation through hands-on projects, curated resources, and community support.</p>
+        <p>Meet the developers who brought it to life:</p>
+    </section>
     
-        function logout() {
-          localStorage.removeItem("loggedInUser");
-          window.location.href = "index.html";
-        }
-      </script>
-
-<section class="about-section">
-    <h1>About EngineersHub</h1>
-    <p>EngineersHub is a collaborative platform created by passionate engineering students to inspire innovation through hands-on projects, curated resources, and community support.</p>
-    <p>Meet the developers who brought it to life:</p>
-  </section>
-  <section class="mission-vision">
-    <h2>Our Vision</h2>
-    <p>To empower every engineer with knowledge, creativity, and confidence to innovate.</p>
-  
-    <h2>Our Mission</h2>
-    <p>To provide quality project ideas and course recommendation in one hub.</p>
-  </section>
-  
-
-  <section class="team-section">
-    <div class="team-container" id="team-container"></div>
-  </section>
-     <!-- Footer -->
-     <footer>
-        <p>
+    <section class="mission-vision-wrapper">
        
-            Our team make sure that every user who uses our website should  have a good user experience,
-            and should find a good projects and courses.
-        </p>
-        <p><b>2025-ENGINEERSHUB</b> "Empowering engineers to create, innovate, and lead the future"
+        <div class="mission-vision-inner">
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>To empower every engineer with knowledge, creativity, and confidence to innovate.</p>
+            </div>
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>To provide quality project ideas and course recommendation in one hub.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <header>
+        <h1>Meet Our Team</h1>
+    </header>
 
-        </p>
+    <div class="team-container">
+        <div class="card" onclick="openModal('person1')">
+            <img src="images/amruta.jpg" alt="Person 1">
+            <h2>Amruta Adhav</h2>
+            <p>Team Leader</p>
+        </div>
+        <div class="card" onclick="openModal('person2')">
+            <img src="images/Yashraj.jpg" alt="Person 2">
+            <h2>Yashraj Babar</h2>
+            <p>Team Member</p>
+        </div>
+        <div class="card" onclick="openModal('person3')">
+            <img src="images/omkar.jpg" alt="Person 3">
+            <h2>Omkar Chede</h2>
+            <p>Team Member</p>
+        </div>
+        <div class="card" onclick="openModal('person4')">
+            <img src="images/vansh.jpg" alt="Person 3">
+            <h2>Vansh Deshmukh</h2>
+            <p>Team Member</p>
+        </div>
+        <div class="card" onclick="openModal('person5')">
+            <img src="images/sneha.jpg" alt="Person 3">
+            <h2>Sneha Borude</h2>
+            <p>Team Member</p>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Replace your previous modal section with this -->
+<div id="person1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('person1')">&times;</span>
+        <img src="images/amruta.jpg"  style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto; display:block;">
+        <h2 style="text-align:center;">Amruta Adhav</h2>
+        <p style="text-align:center;">Hello, I am Amruta Adhav <br> the Team Leader of this project and the frontend developer.<br> I am a second-year computer engineering student at JSPM BSIOTR, Wagholi. <br> amrutaadhav765@gmail.com.</p>
+    </div>
+</div>
+
+<div id="person2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('person2')">&times;</span>
+        <img src="images/Yashraj.jpg"  style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto; display:block;">
+        <h2 style="text-align:center;">Yashraj Babar</h2>
+        <p style="text-align:center;">Hello, I am Yashraj Babar <br> the Team Member of this project<br> I am a second-year computer engineering student at JSPM BSIOTR, Wagholi. <br> yashraj777@gmail.com</p>
+    </div>
+</div>
+
+<div id="person3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('person3')">&times;</span>
+        <img src="images/omkar.jpg"  style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto; display:block;">
+        <h2 style="text-align:center;">Omkar Chede</h2>
+        <p style="text-align:center;">Hello, I am Omkar Chede <br> the Team Member of this project<br> I am a second-year computer engineering student at JSPM BSIOTR, Wagholi. <br> omkarchede98@gmail.com.</p>
+    </div>
+</div>
+
+<div id="person4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('person3')">&times;</span>
+        <img src="images/vansh.jpg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto; display:block;">
+        <h2 style="text-align:center;">Vansh Deshmukh</h2>
+        <p style="text-align:center;">Hello, I am Vansh Deshmukh <br> the Team Member of this project<br> I am a second-year computer engineering student at JSPM BSIOTR, Wagholi. <br> vanshdeshmukh677@gmail.com</p>
+    </div>
+</div>
+
+<div id="person5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('person3')">&times;</span>
+        <img src="images/sneha.jpg"  style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto; display:block;">
+        <h2 style="text-align:center;">Sneha Borude</h2>
+        <p style="text-align:center;">Hello, I am Sneha Borude <br> the Team Member of this project<br> I am a second-year computer engineering student at JSPM BSIOTR, Wagholi. <br> snehaborude21@gmail.com</p>
+    </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>
+   
+        Our team make sure that every user who uses our website should  have a good user experience,
+        and should find a good projects and courses.
+    </p>
+    <p><b>2025-ENGINEERSHUB</b> "Empowering engineers to create, innovate, and lead the future"
+
+    </p>
 </footer>
 
-    <script src="aboutus.js"></script>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+// Toggle Theme Function
+function toggleTheme() {
+    const body = document.body;
+    const icon = document.getElementById('theme-icon');
+
+    // Toggle 'dark-mode' class on body
+    body.classList.toggle('dark-mode');
+
+    // Change icon image (optional)
+    if (body.classList.contains('dark-mode')) {
+        icon.src = 'images/sun-icon'; // Light mode icon
+        icon.alt = 'Switch to Light Mode';
+    } else {
+        icon.src = 'images/moon-icon.png'; // Dark mode icon
+        icon.alt = 'Switch to Dark Mode';
+    }
+
+    // Optional: Save user's theme preference
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+}
+    </script>
 </body>
 </html>
